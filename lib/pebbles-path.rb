@@ -1,4 +1,5 @@
 require "pebbles-path/version"
+require "pebbles-path/positions"
 
 module Pebbles
   module Path
