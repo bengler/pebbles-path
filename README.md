@@ -1,4 +1,4 @@
-# PebblePath
+# Pebbles::Path
 
 Provides searchable, parseable pebbles-compliant UID paths, e.g. (such as `a.b.*`) for Active Record models.
 
@@ -51,11 +51,11 @@ Create a migration for the table that you want to put the paths on, e.g.
 
 ## Usage
 
-Include the `PebblePath` module in the `ActiveRecord` model that has the labels
+Include the `Pebbles::Path` module in the `ActiveRecord` model that has the labels
 
 ```
 class Location < ActiveRecord::Base
-  include PebblePath
+  include Pebbles::Path
 end
 ```
 
