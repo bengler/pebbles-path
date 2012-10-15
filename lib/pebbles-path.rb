@@ -24,7 +24,7 @@ module Pebbles
 
         def self.declare!(path)
           raise ArgumentError, "Path must be valid" unless Pebbles::Uid.valid_path?(path)
-          attributes = Pebble::Path.to_conditions(path)
+          attributes = Pebbles::Path.to_conditions(path)
           path = self.where(attributes).first
           path ||= self.create!(attributes)
         end
