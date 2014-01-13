@@ -20,6 +20,10 @@ describe Pebbles::Path::Positions do
 
   describe "#to_conditions" do
 
+    it 'return {} for nil path' do
+      subject.to_conditions(nil).should eq({})
+    end
+
     specify do
       subject.to_conditions("a.b.c.d.e.f.g.h.i.j").should eq(full_path)
     end

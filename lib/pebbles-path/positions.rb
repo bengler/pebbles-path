@@ -48,6 +48,7 @@ module Pebbles::Path
     class << self
 
       def to_conditions(path)
+        path ||= '*'
         unless Pebbles::Uid::Wildcard.valid?(path)
           raise ArgumentError.new("Wildcards terminate the path. Invalid path: #{path}")
         end
